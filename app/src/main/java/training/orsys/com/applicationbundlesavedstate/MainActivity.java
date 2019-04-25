@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
             //_s = savedInstanceState.getString("key1");
             //_editText.setText(_s);
         }
-        Log.v("ltm","OnCreate");
+        //Log.v("ltm","OnCreate");
     }
 
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
+        Log.v("ltm", "onRestoreInstanceState");
         Log.v("ltm", savedInstanceState.getString("key1"));
     }
 
@@ -44,6 +45,8 @@ public class MainActivity extends Activity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        Log.v("ltm", "onSaveInstanceState");
         outState.putString("key1", String.valueOf(_editText.getText()));
     }
+
 }
