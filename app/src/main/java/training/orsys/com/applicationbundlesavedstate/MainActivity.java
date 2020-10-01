@@ -8,6 +8,7 @@ import android.widget.EditText;
 public class MainActivity extends Activity {
 
     private String _s;
+
     private EditText _editText;
 
     @Override
@@ -23,7 +24,7 @@ public class MainActivity extends Activity {
             //_s = savedInstanceState.getString("key1");
             //_editText.setText(_s);
         }
-        //Log.v("ltm","OnCreate");
+        Log.v("ltm","OnCreate");
     }
 
     @Override
@@ -32,13 +33,14 @@ public class MainActivity extends Activity {
 
         Log.v("ltm","OnDestroy");
     }
-
+/*
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
         Log.v("ltm", "onRestoreInstanceState");
-        Log.v("ltm", savedInstanceState.getString("key1"));
+        _s = savedInstanceState.getString("key1");
+        Log.v("ltm", _s);
     }
 
     @Override
@@ -48,5 +50,5 @@ public class MainActivity extends Activity {
         Log.v("ltm", "onSaveInstanceState");
         outState.putString("key1", String.valueOf(_editText.getText()));
     }
-
+*/
 }
